@@ -3,7 +3,7 @@ public class main {
     public static void main(String[] args) {
         // write your code here
         if (args.length != 2) {
-            System.out.println("Invalid inout!");
+            System.out.println("Invalid input!");
             return;
         }
         String s1 = args[0], s2 = args[1];
