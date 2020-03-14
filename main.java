@@ -7,12 +7,11 @@ public class main {
             System.out.println("false");
             return;
         }
-        char hash1[] = new char[128], hash2[] = new char[128];
+        char hash1[] = new char[128];
         for (int i = 0; i < s1.length(); i++) {
-            if (hash1[s1.charAt(i)] == 0 && hash2[s2.charAt(i)] == 0) {
+            if (hash1[s1.charAt(i)] == 0) {
                 hash1[s1.charAt(i)] = s2.charAt(i);
-                hash2[s2.charAt(i)] = s1.charAt(i);
-            } else if (hash1[s1.charAt(i)] == s2.charAt(i) && hash2[s2.charAt(i)] == s1.charAt(i)) {
+            } else if (hash1[s1.charAt(i)] == s2.charAt(i)) {
                 continue;
             } else {
                 System.out.println("false");
