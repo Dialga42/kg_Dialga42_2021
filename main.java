@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class main {
 
     public static void main(String[] args) {
@@ -11,9 +13,10 @@ public class main {
             System.out.println("false");
             return;
         }
-        char hash[] = new char[128];
+        int hash[] = new int[128];
+        Arrays.fill(hash, -1);
         for (int i = 0; i < s1.length(); i++) {
-            if (hash[s1.charAt(i)] == 0) {
+            if (hash[s1.charAt(i)] == -1) {
                 hash[s1.charAt(i)] = s2.charAt(i);
             } else if (hash[s1.charAt(i)] == s2.charAt(i)) {
                 continue;
